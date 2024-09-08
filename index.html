@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProdEngage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+<!-- Header Section -->
+<!-- Header Section -->
+<header class="bg-blue-600 p-4 ftop-0 w-full z-10">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="flex items-center">
+      <img src="/logo-dept.jpeg" alt="ProdEngage Logo" class="h-10 mr-2">
+      <div class="text-white text-2xl font-bold">ProdEngage</div>
+    </div>
+    <div class="flex items-center justify-end">
+      <div class="flex items-center mr-4">
+        <a href="https://finalprodengage.netlify.app/" class="text-red-600 text-bold text-2xl font-bold">
+          Home
+        </a>
+      </div>
+      <div class="relative">
+        <button class="text-bold font-bold text-red-600 text-2xl rounded" id="about-btn">
+          About <i class="fas fa-caret-down"></i>
+        </button>
+        <ul class="absolute right-0 mt-2 w-48 bg-white rounded-md overflow-hidden shadow-md hidden z-20" id="about-dropdown">
+          <li>
+            <a href="college.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              About College
+            </a>
+          </li>
+          <li>
+            <a href="dept.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              About Department
+            </a>
+          </li>
+          <li>
+            <a href="hod.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+              Word from HoD
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Main Section with Parallel Containers -->
+<div class="text-black text-center text-2xl text-lg font-bold italic hover:text-gray-600 transition duration-300 ease-in-out">
+  People begin to become successful the minute they decide to be - Harvey Mackay
+</div>
+<div class="container mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg max-w-6xl">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    <!-- Download Question Paper Form -->
+    <div class="bg-white shadow-lg p-6 rounded-lg">
+      <h1 class="text-2xl font-bold mb-6 text-center text-indigo-600">Download Resources</h1>
+      <form class="space-y-4" id="questionPaperForm">
+        <!-- Semester Number -->
+        <div>
+          <label for="sem" class="block text-lg font-bold text-gray-700">Semester Number</label>
+          <select id="sem" name="sem" class="block w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" onchange="updateRegulationCodes()">
+            <option value="" selected disabled>Select Semester</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+
+        <!-- Regulation -->
+        <div>
+          <label for="regulation" class="block text-lg font-bold text-gray-700">Regulation</label>
+          <select id="regulation" name="regulation" class="block w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" onchange="updateSubjectCodes()">
+            <option value="" selected disabled>Select Regulation</option>
+            <option value="2023">2023</option>
+            <option value="2019">2019</option>
+          </select>
+        </div>
+
+        <!-- Subject Code -->
+        <div>
+          <label for="subject" class="block text-lg font-bold text-gray-700">Subject Code - Course Name</label>
+          <select id="subject" name="subject" class="block w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+            <option value="" selected disabled>Select Subject Code and Course Name</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-center">
+          <button type="button" onclick="downloadQuestionPaper()" class="px-6 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Download</button>
+        </div>
+      </form>
+
+      <p class="text-lg font-bold text-red-600 mt-4 text-center">
+        Please use your official college email ID to access the files.
+      </p><p class="text-lg font-bold text-red-600 mt-4 text-center"> I request You guys to refer 2019 Regulation</p>
+    </div>
+
+    <!-- Events Section -->
+    <div class="bg-white shadow-lg p-6 rounded-lg overflow-hidden relative">
+      <h2 class="text-2xl font-bold mb-6 text-center text-indigo-600 top-0 z-20 p-4">Events Resources</h2> <!-- z-20 for sticky header -->
+      <div class="overflow-y-auto h-50">
+        <ul class="space-y-2">
+          <!-- Event links here -->
+          <li class="flex items-center">
+            <span class="text-lg font-medium mr-2">1.</span>
+            <a href="https://unstop.com/" class="text-indigo-600 hover:underline hover:text-indigo-800" target="_blank">Unstop</a>
+          </li>
+          <li class="flex items-center">
+            <span class="text-lg font-medium mr-2">2.</span>
+            <a href="https://www.knowafest.com/explore/events" class="text-indigo-600 hover:underline hover:text-indigo-800" target="_blank">Knowafest</a>
+          </li>
+          <li class="flex items-center">
+            <span class="text-lg font-medium mr-2">3.</span>
+            <a href="https://internationalconferencealerts.com/" class="text-indigo-600 hover:underline hover:text-indigo-800" target="_blank">International Conference Alerts</a>
+          </li>
+          <li class="flex items-center">
+            <span class="text-lg font-medium mr-2">4.</span>
+            <a href="https://techfest.org/" class="text-indigo-600 hover:underline hover:text-indigo-800" target="_blank">TechFest IIT BOMBAY</a>
+          </li>
+          <li class="flex items-center">
+            <span class="text-lg font-medium mr-2">5.</span>
+            <a href="https://shaastra.org/" class="text-indigo-600 hover:underline hover:text-indigo-800" target="_blank">Shaastra IIT MADRAS</a>
+          </li>
+          <li class="flex items-center">
+            <span class="text-lg font-medium mr-2">6.</span>
+            <a href="https://yugam.in/" class="text-indigo-600 hover:underline hover:text-indigo-800" target="_blank">Yugam KCT</a>
+          </li>
+          <li class="flex items-center">
+            <span class="text-lg font-medium mr-2">7.</span>
+            <a href="https://pragyan.org/" class="text-indigo-600 hover:underline hover:text-indigo-800" target="_blank">Pragyan NIT TRICHY</a>
+          </li>
+          <li class="flex items-center">
+            <span class="text-lg font-medium mr-2">8.</span>
+            <a href="https://www.kurukshetraceg.org.in/" class="text-indigo-600 hover:underline hover:text-indigo-800" target="_blank">Kurukshetra ANNA UNIVERSITY</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Learning Resources Section -->
+    <div class="bg-white shadow-lg p-6 rounded-lg overflow-hidden relative">
+      <h2 class="text-2xl font-bold mb-4 text-center text-indigo-600 sticky top-0 z-20 p-4">Learning Resources</h2>
+      <div class="overflow-y-auto h-50">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Learning resources links here -->
+           <!-- Data Science and Machine Learning -->
+          <div class="p-4 bg-white rounded-lg shadow-md">
+            <h3 class="text-lg font-bold mb-2">Resume Building</h3>
+            <p class="mb-4">
+              <a href="https://www.youtube.com/watch?v=CE7DoyXlV-c" class="text-blue-600 hover:text-blue-800">Youtube-1</a><br>
+              <a href="https://www.youtube.com/watch?v=iQcZs-rbZ1I" class="text-blue-600 hover:text-blue-800">Youtube-2</a>
+            </p>
+          </div>
+          <div class="p-4 bg-white rounded-lg shadow-md">
+            <h3 class="text-lg font-bold mb-2">Data Science and Machine Learning</h3>
+            <p class="mb-4">
+              <a href="https://www.kaggle.com/" class="text-blue-600 hover:text-blue-800">Kaggle</a>
+            </p>
+          </div>
+          <div class="p-4 bg-white rounded-lg shadow-md">
+          <h3 class="text-lg font-bold mb-2">All Programming Language</h3>
+          <p class="mb-4">
+            <a href="https://www.freecodecamp.org/" class="text-blue-600 hover:text-blue-800">FreeCodeCamp</a><br>
+            <a href="https://www.geeksforgeeks.org/" class="text-blue-600 hover:text-blue-800">GeeksForGeeks</a><br>
+            <a href="https://www.coursera.org/" class="text-blue-600 hover:text-blue-800">Coursera</a><br>  
+            <a href="https://www.udemy.com/" class="text-blue-600 hover:text-blue-800">Udemy</a><br>
+            <a href="https://www.guvi.in/" class="text-blue-600 hover:text-blue-800">Guvi</a>
+          </p>
+        </div>
+          <!-- Excel -->
+          <div class="p-4 bg-white rounded-lg shadow-md">
+            <h3 class="text-lg font-bold mb-2">Excel</h3>
+            <p class="mb-4">
+              <a href="https://www.excel-easy.com/" class="text-blue-600 hover:text-blue-800">Excel Easy</a>
+            </p>
+            <p class="mb-4">
+              <a href="https://excel-practice-online.com/" class="text-blue-600 hover:text-blue-800">Excel Practice Online</a>
+            </p>
+          </div>
+
+          <!-- Matlab -->
+          <div class="p-4 bg-white rounded-lg shadow-md">
+            <h3 class="text-lg font-bold mb-2">Matlab</h3>
+            <p class="mb-4">
+              <a href="https://matlabacademy.mathworks.com/" class="text-blue-600 hover:text-blue-800">Matlab Academy</a>
+            </p>
+          </div>
+
+          <!-- Autocad -->
+          <div class="p-4 bg-white rounded-lg shadow-md">
+            <h3 class="text-lg font-bold mb-2">Autocad</h3>
+            <p class="mb-4">
+              <a href="https://youtu.be/VtLXKU1PpRU?si=swlkJQQHWScprDVX" class="text-blue-600 hover:text-blue-800">Autocad Tutorial</a>
+            </p>
+          </div>
+
+          <!-- Ansys -->
+          <div class="p-4 bg-white rounded-lg shadow-md">
+            <h3 class="text-lg font-bold mb-2">Ansys</h3>
+            <p class="mb-4">
+              <a href="https://www.youtube.com/@AnsysLearning/playlists" class="text-blue-600 hover:text-blue-800">Ansys Learning</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Department News Section -->
+    <div class="bg-white shadow-lg p-6 rounded-lg overflow-hidden relative">
+      <h2 class="text-2xl font-bold text-center mb-4 text-indigo-600 sticky top-0 bg-white z-20 p-4">Department News</h2>
+      <div class="overflow-y-auto h-50">
+        <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+          <!-- News entries here -->
+          <div class="flex items-center mb-2">
+            <!-- Consistent icon size -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 4h10a2 2 0 012 2v11a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2z"/>
+            </svg>
+            <p class="text-gray-700 font-bold">Krishnavarun S (22P217) secured 1st place in, Coding Club, Tech Bridge Results</p>
+          </div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+          <div class="flex items-center mb-2">
+            <!-- Consistent icon size -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 4h10a2 2 0 012 2v11a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2z"/>
+            </svg>
+            <p class="text-gray-700 font-bold">Vinisha S (22P133) recruited for Summer Internship by Caterpillar</p>
+          </div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-md mb-4">
+          <div class="flex items-center mb-2">
+            <!-- Consistent icon size -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 4h10a2 2 0 012 2v11a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2z"/>
+            </svg>
+            <p class="text-gray-700 font-bold">The recipient of the Best Outstanding Student Award for the academic year 2023-24 has been announced.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="bg-blue-600 p-4 mt-10">
+  <div class="container mx-auto text-center text-white">
+    <div class="mt-4">
+      <p>Contact Us:</p>
+      <p>Designed and Developed by Team TheFixers</p>
+    </div>
+  </div>
+</footer>
+
+    
+<script>
+document.getElementById('about-btn').addEventListener('click', function() {
+  const dropdown = document.getElementById('about-dropdown');
+  dropdown.classList.toggle('hidden');
+});
+
+        function updateRegulationCodes() {
+            const sem = document.getElementById('sem').value;
+            const regulationSelect = document.getElementById('regulation');
+            regulationSelect.disabled = !sem; // Enable or disable regulation dropdown based on semester selection
+        }
+
+        function updateSubjectCodes() {
+            const sem = document.getElementById('sem').value;
+            const regulation = document.getElementById('regulation').value;
+            const subjectSelect = document.getElementById('subject');
+            subjectSelect.innerHTML = ''; // Clear existing options
+
+            let subjectCodes = [];
+
+            // Update based on semester and regulation
+            if (regulation === '2023') {
+                if (sem === '1') {
+                    subjectCodes = [
+                        { code: '23P101', name: 'Calculus and its Applications' },
+                        { code: '23P102', name: 'Physics' },
+                        { code: '23P103', name: 'Chemistry of Engineering Materials' },
+                        { code: '23P104', name: 'Engineering Materials and Metallurgy' },
+                        { code: '23G105', name: 'English Language Proficiency' },
+                        { code: '23P110', name: 'Basic Sciences Laboratory' },
+                        { code: '23P111', name: 'Engineering Practices Laboratory' }
+                    ];
+                } else if (sem === '2') {
+                    subjectCodes = [
+                        { code: '23P201', name: 'Complex Variables and Transforms' },
+                        { code: '23P202', name: 'Casting Technology' },
+                        { code: '23P203', name: 'Engineering Mechanics' },
+                        { code: '23P204', name: 'Basics of Electrical and Electronics Engineering' },
+                        { code: '23P210', name: 'Engineering Graphics' },
+                        { code: '23P211', name: 'Electrical and Electronics Engineering Laboratory' }
+                    ];
+                } 
+            } else if (regulation === '2019') {
+                if (sem === '1') {
+                    subjectCodes = [
+                        { code: '19P101', name: 'Calculus and its Applications' },
+                        { code: '19P102', name: 'Physics' },
+                        { code: '19P103', name: 'Chemistry' },
+                        { code: '19P104', name: 'Professional Ethics' },
+                        { code: '19G105', name: 'English Language Proficiency' },
+                        { code: '19P110', name: 'Engineering Graphics' },
+                        { code: '19P111', name: 'Basic Sciences Laboratory' },
+                        { code: '19P112', name: 'Engineering Practices' }
+                    ];
+                } else if (sem === '2') {
+                    subjectCodes = [
+                        { code: '19P201', name: 'Complex Variables and Transforms' },
+                        { code: '19P202', name: 'Materials Science' },
+                        { code: '19P203', name: 'Chemistry of Engineering Materials' },
+                        { code: '19P204', name: 'Engineering Mechanics' },
+                        { code: '19P205', name: 'Basics of Electrical and Electronics Engineering' },
+                        { code: '19P210', name: 'Electrical and Electronics Engineering Laboratory' },
+                        { code: '19P211', name: 'C Programming Laboratory' },
+                        { code: '19G001', name: 'Communication Skills for Engineers' }
+
+                    ];
+                } else if (sem === '3') {
+                    subjectCodes = [
+                        { code: '19P301', name: 'Numerical Methods' },
+                        { code: '19P302', name: 'Engineering Metallurgy' },
+                        { code: '19P303', name: 'Strength of Materials' },
+                        { code: '19P304', name: 'Fluid Mechanics and Machinery' },
+                        { code: '19P305', name: 'Welding Technology' },
+                        { code: '19O306', name: 'Engineering Economics' },
+                        { code: '19P310', name: 'Machine Drawing' },
+                        { code: '19P311', name: 'Metallurgy and Strength of Materials Laboratory' }
+                    ];
+                } else if (sem === '4') {
+                    subjectCodes = [
+                        { code: '19P401', name: 'Probability and Statistical Methods' },
+                        { code: '19P402', name: 'Thermal Engineering' },
+                        { code: '19P403', name: 'Metal Forming Process' },
+                        { code: '19P404', name: 'Foundry Technology' },
+                        { code: '19P405', name: 'Mechanics of Machines' },
+                        { code: '19P406', name: 'Machining Technology' },
+                        { code: '19P410', name: 'Thermal Engineering Laboratory' },
+                        { code: '19P411', name: 'Fluid Mechanics and Machinery Laboratory' },
+                        { code: '19P412', name: 'Manufacturing Processes Laboratory' },
+                        { code: '19TC02', name: 'Tamils and Technology' }
+                    ];
+                }else if (sem === '5') {
+                    subjectCodes = [
+                        { code: '19P023', name: 'Statistical Quality Control' },
+                        { code: '19P501', name: 'Computer Numerical Control Machines' },
+                        { code: '19P502', name: 'Process Planning and Cost Estimation' },
+                        { code: '19P503', name: 'Manufacturing Metrology' },
+                        { code: '19P504', name: 'Design of Machine Elements' },
+                        { code: '19P505', name: 'Applied Hydraulics and Pneumatics' },
+                        { code: '19P510', name: 'Manufacturing Technology Laboratory' },
+                        { code: '19P511', name: 'Metrology and Computer Aided Inspection Laboratory' },
+                        { code: '19P555', name: 'Business and Marginal Communication' }
+                    ];
+                }
+            }
+
+            // Populate the subject dropdown
+            subjectCodes.forEach(subject => {
+                const option = document.createElement('option');
+                option.value = subject.code;
+                option.textContent = `${subject.code} - ${subject.name}`;
+                subjectSelect.appendChild(option);
+            });
+        }
+
+        function downloadQuestionPaper() {
+            const sem = document.getElementById('sem').value;
+            const regulation = document.getElementById('regulation').value;
+            const subject = document.getElementById('subject').value;
+
+            if (!sem || !regulation || !subject) {
+                alert('Please select all the fields.');
+                return;
+            }
+// Individual drive link generation based on subject codes
+const driveLinks = {
+    // 2023 Regulation
+    '23P101': 'https://drive.google.com/drive/folders/123P101',
+    '23P102': 'https://drive.google.com/drive/folders/123P102',
+    '23P103': 'https://drive.google.com/drive/folders/123P103',
+    '23P104': 'https://drive.google.com/drive/folders/123P104',
+    '23G105': 'https://drive.google.com/drive/folders/123G105',
+    '23P110': 'https://drive.google.com/drive/folders/123P110',
+    '23P111': 'https://drive.google.com/drive/folders/123P111',
+    '23P201': 'https://drive.google.com/drive/folders/123P201',
+    '23P202': 'https://drive.google.com/drive/folders/123P202',
+    '23P203': 'https://drive.google.com/drive/folders/123P203',
+    '23P204': 'https://drive.google.com/drive/folders/123P204',
+    '23P210': 'https://drive.google.com/drive/folders/123P210',
+    '23P211': 'https://drive.google.com/drive/folders/123P211',
+    '23P301': 'https://drive.google.com/drive/folders/123P301',
+    '23P302': 'https://drive.google.com/drive/folders/123P302',
+    '23P303': 'https://drive.google.com/drive/folders/123P303',
+    '23P304': 'https://drive.google.com/drive/folders/123P304',
+    '23O305': 'https://drive.google.com/drive/folders/123O305',
+    '23P310': 'https://drive.google.com/drive/folders/123P310',
+    '23P311': 'https://drive.google.com/drive/folders/123P311',
+    '23TC01': 'https://drive.google.com/drive/folders/123TC01',
+    '23P401': 'https://drive.google.com/drive/folders/123P401',
+    '23P402': 'https://drive.google.com/drive/folders/123P402',
+    '23P403': 'https://drive.google.com/drive/folders/123P403',
+    '23P404': 'https://drive.google.com/drive/folders/123P404',
+    '23P405': 'https://drive.google.com/drive/folders/123P405',
+    '23P410': 'https://drive.google.com/drive/folders/123P410',
+    '23P411': 'https://drive.google.com/drive/folders/123P411',
+    '23P412': 'https://drive.google.com/drive/folders/123P412',
+    '23Q413': 'https://drive.google.com/drive/folders/123Q413',
+    '23TC02': 'https://drive.google.com/drive/folders/123TC02',
+
+    // 2019 Regulation - Semester 1
+    '19P101': 'https://drive.google.com/drive/folders/1cgAj2escQYTTuxMt2fXBmzEwPVapbzvQ?usp=drive_link',
+    '19P102': 'https://drive.google.com/drive/folders/1EqBi_bqwbACJUpmg_V1HztdFAzg0id5N?usp=drive_link',
+    '19P103': 'https://drive.google.com/drive/folders/1EwpLJDan5aHsUv4061ZkZiKsrohCUwqZ?usp=drive_link',
+    '19P104': 'https://drive.google.com/drive/folders/1Hx0-_Q9IizQv7SmIfPHjEB6xXqSzGHEZ?usp=drive_link',
+    '19G105': 'https://drive.google.com/drive/folders/1UWUG-c5NX251xXAtVYeazXm0aJNAWasm?usp=drive_link',
+    '19P110': 'https://drive.google.com/drive/folders/19P110',  
+    '19P111': 'https://drive.google.com/drive/folders/1Dabp2bLblV_oNa0v-CmyRtFWIvKNWarr?usp=drive_link',
+    '19P112': 'https://drive.google.com/drive/folders/1DFpKoih_zO1dKUsilRwCrqNMDD1vHGGC?usp=drive_link',
+    '19P123': 'https://drive.google.com/drive/folders/1S8veXDgrNDhRxJUND0890Yi9mQL72suL?usp=drive_link',
+    '19P201': 'https://drive.google.com/drive/folders/1PJVoK_OC1CrF0EPzQMkjohiG73dpDZkZ?usp=drive_link',
+    '19P202': 'https://drive.google.com/drive/folders/1PggTejOXh6RTFeySS8D9XoJjoWyM1nWG?usp=drive_link',
+    '19P203': 'https://drive.google.com/drive/folders/1PdL0hL57EAOz8ieFh3ioh9WAE8EpWEYf?usp=drive_link',
+    '19P204': 'https://drive.google.com/drive/folders/1PCfNAHY84fqMnUcxkylbqXMhOtjS1_nC?usp=drive_link',
+    '19P205': 'https://drive.google.com/drive/folders/1GZTQJ366xUOpMpHY3h7bXO1EZtROStnP?usp=drive_link',
+    '19P210': 'https://drive.google.com/drive/folders/1PFnpr_7gsFC6j2YtBYMMLmLw6hn5YbNi?usp=drive_link',
+    '19P211': 'https://drive.google.com/drive/folders/1GYHcpd2TOyik1jQ5wGCamI7FmcqiodND?usp=drive_link',
+    '19P222': 'https://drive.google.com/drive/folders/1G-JqSZCuD35wMZ1e0-B9cue13siTgLbf?usp=drive_link',
+    '19G001': 'https://drive.google.com/drive/folders/1PLkA9UZtmFLAh1AcvgkCbsD8Z8LlMukd?usp=drive_link',
+    '19P301': 'https://drive.google.com/drive/folders/10JjUGvzIMEbziXeue2dx9S3modSfEV7M?usp=sharing',
+    '19P303': 'https://drive.google.com/drive/folders/10NZJ5dw8qZDAayfogAT7jXnpIu59_V7k?usp=sharing',
+    '19P302': 'https://drive.google.com/drive/folders/1-bB5LUSnSEKwXWOoyCWhOhOU_xmAED2u?usp=sharing',
+    '19P304': 'https://drive.google.com/drive/folders/1-tOIdrbrxcPWTL_ndJagAhH6xPeouM4f?usp=sharing',
+    '19P305': 'https://drive.google.com/drive/folders/10mXj9ox1aVLivkJqdioJQS8azjf-ej_N?usp=sharing',
+    '19O306': 'https://drive.google.com/drive/folders/1f8NoTWAxtDKgiOzijqXBHodiYBHbL_qu?usp=drive_link',
+    '19P310': 'https://drive.google.com/drive/folders/1-eaATPnQRgK21vDc4JKKsa-wmZ6syYOZ?usp=sharing',
+    '19P311': 'https://drive.google.com/drive/folders/19P311',
+    '19P333':'https://drive.google.com/drive/folders/16Yol38eUXLXE7O7WBojf3bimGPhP0EXr',
+    '19P401': 'https://drive.google.com/drive/folders/1a5HLztY2QWJFgWbwt-MSaS6y2P2RqeUR?usp=drive_link',
+    '19P402': 'https://drive.google.com/drive/folders/1aDklQ-QhBXs-rVQJjLxsqLiDDGPTKHSm?usp=drive_link',
+    '19P403': 'https://drive.google.com/drive/folders/1a7H8QNkuvKDf5eGoYIE0IOb21YIkk-5E?usp=drive_link',
+    '19P404': 'https://drive.google.com/drive/folders/1aRJsQQc98FWFU9eVbFlZzj8AVAWaA9W_?usp=drive_link',
+    '19P405': 'https://drive.google.com/drive/folders/1aQG7-MKUmvApwGJE8xEKwTvvNE_qV1yd?usp=drive_link',
+    '19P406': 'https://drive.google.com/drive/folders/1aWSu2YI9u2rUn2MAP6MoMFwBpZ3y_nw2?usp=drive_link',
+    '19P410': 'https://drive.google.com/drive/folders/1aau7TqdCb2qQHabRUQjBlOTNPkni5ja9?usp=drive_link',
+    '19P411': 'https://drive.google.com/drive/folders/1aeDdnFDrd7g3h2iCgPUmQcTenkJIeA4Q?usp=drive_link',
+    '19Q413': 'https://drive.google.com/drive/folders/13PY6FvQPZ7OG1ipmvBD9UbwvzGAps0tU?usp=drive_link',
+    '19TC02':'https://drive.google.com/drive/folders/1298EN-g7tE0W-8pCq3kuu6mChm4Or9BY?usp=drive_link',
+    '19P444':'https://drive.google.com/drive/folders/1_xBcvCIqXsG3vOhr8PPVQESrf9tv9wIg',
+    '19P501': 'https://drive.google.com/drive/folders/1BgYiDVSODZvzYzFNZJze9-HdZW6yaDnI?usp=drive_link',
+    '19P502': 'https://drive.google.com/drive/folders/1BhQJyThlHdILZG3ImSwxMZ-s_VdNrlS0?usp=drive_link',
+    '19P503': 'https://drive.google.com/drive/folders/1Bi6FCNHp1rU1fh2JTYnWEhwMO6gn7Bj2?usp=drive_link',
+    '19P504': 'https://drive.google.com/drive/folders/1BjCX10mnXfS1O0y3z5T8_-vMeVCYN9aY?usp=drive_link',
+    '19P505': 'https://drive.google.com/drive/folders/1BjonaZdKC_IzXBC8i0tFjOOBy6pABhaS?usp=drive_link',
+    '19P023': 'https://drive.google.com/drive/folders/1BnV5-DBfbLJ43TF6XXAycl4nXCHx8bWp?usp=drive_link',
+    '19P510': 'https://drive.google.com/drive/folders/1BnfsGDcEKs2EZuFX5z3d5D_0eKgvotAH?usp=drive_link',
+    '19P511': 'https://drive.google.com/drive/folders/1BrVr1TAxh0dszfWbJ2sINsBm_xwMToAz?usp=drive_link',
+    '19P555': 'https://drive.google.com/drive/folders/1JKs03XbLxj9Cjsimc43I5TM6PjFc75jf?usp=drive_link',
+    
+
+};
+
+
+            const driveLink = driveLinks[subject];
+            if (driveLink) {
+                window.open(driveLink, '_blank');
+            } else {
+                alert('No drive link found for the selected subject.');
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
