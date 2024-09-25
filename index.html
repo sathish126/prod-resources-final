@@ -134,14 +134,7 @@
             <p class="text-gray-700 font-bold">Krishnavarun S (22P217) secured 2nd place in, Coding Club, CIPHER Results</p>
           </div>
         </div>
-        <div class="bg-white p-4 rounded-lg shadow-md mb-4">
-          <div class="flex items-center mb-2">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 4h10a2 2 0 012 2v11a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2z"/>
-            </svg>
-            <p class="text-gray-700 font-bold">24/09/2024 ,3rd year Production Regular ,AHP(19P505) Project Showcase on Y-Block 2nd Floor ,Automation Lab</p>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -389,20 +382,22 @@ document.getElementById('about-btn').addEventListener('click', function() {
             }
 // Individual drive link generation based on subject codes
 const driveLinks = {
-    // 2023 Regulation
-    '23P101': 'https://drive.google.com/drive/folders/123P101',
-    '23P102': 'https://drive.google.com/drive/folders/123P102',
-    '23P103': 'https://drive.google.com/drive/folders/123P103',
-    '23P104': 'https://drive.google.com/drive/folders/123P104',
-    '23G105': 'https://drive.google.com/drive/folders/123G105',
-    '23P110': 'https://drive.google.com/drive/folders/123P110',
-    '23P111': 'https://drive.google.com/drive/folders/123P111',
-    '23P201': 'https://drive.google.com/drive/folders/123P201',
-    '23P202': 'https://drive.google.com/drive/folders/123P202',
-    '23P203': 'https://drive.google.com/drive/folders/123P203',
-    '23P204': 'https://drive.google.com/drive/folders/123P204',
+    // 2023 Regulation Semester 1
+    '23P101': 'https://drive.google.com/drive/folders/1YtFp2t-CmOO3jxVqcKoTyShWiAGJQ-LR?usp=drive_link',
+    '23P102': 'https://drive.google.com/drive/folders/1NQthSdiTDvyfP1szpLPMtT_sgBkmRd-e?usp=drive_link',
+    '23P103': 'https://drive.google.com/drive/folders/1sHf3ko_e1L1MXzygFvxJEbkd8R-ChxLD?usp=drive_link',
+    '23P104': 'https://drive.google.com/drive/folders/1v3WfjJHGyn6tO7ayzO4mdGHPKpKCq98c?usp=drive_link',
+    '23G105': 'https://drive.google.com/drive/folders/1yVG4oJ09QjBGspEP4xNECBNuMT2QmwnK?usp=drive_link',
+    '23P110': 'https://drive.google.com/drive/folders/1AS1pkOyTd9MwI-3AX-iRlIpOLc4LBw70?usp=drive_link',
+    '23P111': 'https://drive.google.com/drive/folders/1xrrYtOL0fabxeQ91tk4fMXGO1aBWDUPj?usp=drive_link',
+    // 2023 Regulation Semester 2
+    '23P201': 'https://drive.google.com/drive/folders/1XUVnUM4IqZ2UOzPWFuITGnqsBYIX82vz?usp=drive_link',
+    '23P202': 'https://drive.google.com/drive/folders/1WdVd2or0klE3-FiDjYbBEf3SxCrWhFBC?usp=drive_link',
+    '23P203': 'https://drive.google.com/drive/folders/10KVO4PsFNNxFqi_XCpBnFpSbrzBgdqvn?usp=drive_link',
+    '23P204': 'https://drive.google.com/drive/folders/1ilWRgs6mggpQYqXi1v1kYkWC_FX-eA-S?usp=drive_link',
     '23P210': 'https://drive.google.com/drive/folders/123P210',
     '23P211': 'https://drive.google.com/drive/folders/123P211',
+    // 2023 Regulation Semester 3
     '23P301': 'https://drive.google.com/drive/folders/123P301',
     '23P302': 'https://drive.google.com/drive/folders/123P302',
     '23P303': 'https://drive.google.com/drive/folders/123P303',
@@ -411,6 +406,7 @@ const driveLinks = {
     '23P310': 'https://drive.google.com/drive/folders/123P310',
     '23P311': 'https://drive.google.com/drive/folders/123P311',
     '23TC01': 'https://drive.google.com/drive/folders/123TC01',
+    // 2023 Regulation Semester 4
     '23P401': 'https://drive.google.com/drive/folders/123P401',
     '23P402': 'https://drive.google.com/drive/folders/123P402',
     '23P403': 'https://drive.google.com/drive/folders/123P403',
@@ -430,17 +426,18 @@ const driveLinks = {
     '19G105': 'https://drive.google.com/drive/folders/16jotibxGfhQtfcwEwUqAiWqADKfk6oMZ?usp=drive_link',
     '19P110': 'https://drive.google.com/drive/folders/19P110',  
     '19P111': 'https://drive.google.com/drive/folders/1AS1pkOyTd9MwI-3AX-iRlIpOLc4LBw70?usp=drive_link',
-    '19P112': 'https://drive.google.com/drive/folders/1xrrYtOL0fabxeQ91tk4fMXGO1aBWDUPj?usp=drive_link',
-
-    '19P201': 'https://drive.google.com/drive/folders/1PJVoK_OC1CrF0EPzQMkjohiG73dpDZkZ?usp=drive_link',
-    '19P202': 'https://drive.google.com/drive/folders/1PggTejOXh6RTFeySS8D9XoJjoWyM1nWG?usp=drive_link',
-    '19P203': 'https://drive.google.com/drive/folders/1PdL0hL57EAOz8ieFh3ioh9WAE8EpWEYf?usp=drive_link',
-    '19P204': 'https://drive.google.com/drive/folders/1PCfNAHY84fqMnUcxkylbqXMhOtjS1_nC?usp=drive_link',
-    '19P205': 'https://drive.google.com/drive/folders/1GZTQJ366xUOpMpHY3h7bXO1EZtROStnP?usp=drive_link',
+    '19P112': 'https://drive.google.com/drive/folders/1xrrYtOL0fabxeQ91tk4fMXGO1aBWDUPj?usp=drive_link',    
+    // 2019 Regulation - Semester 2
+    '19P201': 'https://drive.google.com/drive/folders/1_9hrAkHGgBxywEaqnhH-JpgN1XMUfeFS?usp=drive_link',
+    '19P202': 'https://drive.google.com/drive/folders/18N8SJv_vOVott_cmoHJmp7qUKHXvibWk?usp=drive_link',
+    '19P203': 'https://drive.google.com/drive/folders/1JRh8bdq8SA2jMMuBvOcVMk5Z0ufXqHSJ?usp=drive_link',
+    '19P204': 'https://drive.google.com/drive/folders/1IbcB5ggSf8FtnlW8aChBounPGbMUchzK?usp=drive_link',
+    '19P205': 'https://drive.google.com/drive/folders/1J4Y0-_T3mKND3NNSkoBgHFLe_8_EwXjI?usp=drive_link',
     '19P210': 'https://drive.google.com/drive/folders/1PFnpr_7gsFC6j2YtBYMMLmLw6hn5YbNi?usp=drive_link',
     '19P211': 'https://drive.google.com/drive/folders/1GYHcpd2TOyik1jQ5wGCamI7FmcqiodND?usp=drive_link',
     '19P222': 'https://drive.google.com/drive/folders/1G-JqSZCuD35wMZ1e0-B9cue13siTgLbf?usp=drive_link',
     '19G001': 'https://drive.google.com/drive/folders/1PLkA9UZtmFLAh1AcvgkCbsD8Z8LlMukd?usp=drive_link',
+    // 2019 Regulation - Semester 3
     '19P301': 'https://drive.google.com/drive/folders/1s4zsgxlCmGZoAuslGYuAi9pSxcXh2b-Y?usp=drive_link',
     '19P303': 'https://drive.google.com/drive/folders/1t8CgsYTmE9w9ThezpaR1VVFh0TeEi5Bk?usp=drive_link',
     '19P302': 'https://drive.google.com/drive/folders/1pBcS1_OGdNCWxQF5JP0LQ1mcG9xJB9gd?usp=drive_link',
@@ -449,6 +446,7 @@ const driveLinks = {
     '19O306': 'https://drive.google.com/drive/folders/1E7uVIdKk0E4rtQvzRAYqq9Pm0gzC0JAg?usp=drive_link',
     '19P310': 'https://drive.google.com/drive/folders/1pGRf8Esa7Md5CghS2ZKusYO5Bu4n9nbI?usp=drive_link',
     '19P311': 'https://drive.google.com/drive/folders/1AoD8T829DQ-_Ffrjo2ShYZieRe2HQ94Q?usp=drive_link',
+    // 2019 Regulation - Semester 4
     '19P401': 'https://drive.google.com/drive/folders/1a5HLztY2QWJFgWbwt-MSaS6y2P2RqeUR?usp=drive_link',
     '19P402': 'https://drive.google.com/drive/folders/1aDklQ-QhBXs-rVQJjLxsqLiDDGPTKHSm?usp=drive_link',
     '19P403': 'https://drive.google.com/drive/folders/1a7H8QNkuvKDf5eGoYIE0IOb21YIkk-5E?usp=drive_link',
@@ -460,6 +458,7 @@ const driveLinks = {
     '19Q413': 'https://drive.google.com/drive/folders/13PY6FvQPZ7OG1ipmvBD9UbwvzGAps0tU?usp=drive_link',
     '19TC02':'https://drive.google.com/drive/folders/1298EN-g7tE0W-8pCq3kuu6mChm4Or9BY?usp=drive_link',
     '19P444':'https://drive.google.com/drive/folders/1_xBcvCIqXsG3vOhr8PPVQESrf9tv9wIg',
+    // 2019 Regulation - Semester 5
     '19P501': 'https://drive.google.com/drive/folders/1BgYiDVSODZvzYzFNZJze9-HdZW6yaDnI?usp=drive_link',
     '19P502': 'https://drive.google.com/drive/folders/1BhQJyThlHdILZG3ImSwxMZ-s_VdNrlS0?usp=drive_link',
     '19P503': 'https://drive.google.com/drive/folders/1Bi6FCNHp1rU1fh2JTYnWEhwMO6gn7Bj2?usp=drive_link',
