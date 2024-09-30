@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProdEngage</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Scroll-to-top button styling */
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffffff; /* Indigo color */
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none; /* Hidden by default */
+            cursor: pointer;
+            z-index: 1000; /* Ensures it stays above other content */
+            transition: background-color 0.3s;
+        }
+  
+        #scroll-to-top:hover {
+            background-color: #4338ca; /* Darker shade on hover */
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100">
@@ -50,6 +72,11 @@
                 Several advanced centres are set up with financial support from the Ministry of Human Resources Development, DST and other agencies. These include the: CAD/CAM/CIM Centre, Virtual Reality Centre, Virtual Instrumentation Centre, Educational Technology Centre for Continuing Education, Project IMPACT Centre (a project funded by the World Bank, Swiss Development Cooperation of India), UNDP Jute Project Centre, TIFAC - CORE, Rapid Prototyping and Manufacturing Centre, Festo-PSG Centre for Pneumatics and a few others.
             </p>
         </div>
+
+         <!-- Scroll to Top Button -->
+<div id="scroll-to-top" onclick="scrollToTop()" class="fixed bottom-4 right-4 bg-black text-white rounded-full p-4 shadow-lg cursor-pointer hover:bg-indigo-700 transition">
+    <i class="fas fa-chevron-up"></i> <!-- Font Awesome upward arrow icon -->
+  </div>
         <!-- Footer Section -->
   <footer class="bg-blue-600 p-4 mt-10">
     <div class="container mx-auto text-center text-white">
@@ -62,4 +89,23 @@
 </footer>
 
 </body>
+<script>
+     // Show/Hide Scroll to Top button based on scroll position
+     window.onscroll = function() {
+            const button = document.getElementById('scroll-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Scroll to Top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scrolling
+            });
+        }
+</script>
 </html>
