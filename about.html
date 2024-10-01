@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProdEngage</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Scroll-to-top button styling */
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffffff; /* White background */
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none; /* Hidden by default */
+            cursor: pointer;
+            z-index: 1000; /* Ensures it stays above other content */
+            transition: background-color 0.3s;
+        }
+
+        #scroll-to-top:hover {
+            background-color: #4338ca; /* Darker shade on hover */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-blue-600 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="/logo-dept.jpeg" alt="ProdEngage Logo" class="h-10 mr-3">
+                <h1 class="text-white text-2xl font-bold">ProdEngage</h1>
+            </div>
+            <nav class="flex items-center space-x-6">
+                <a href="index.html" class="text-white font-semibold hover:text-gray-300 transition text-lg">Home</a>   
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+        <h1 class="text-3xl font-bold text-blue-600 mb-6">About this Initiative</h1>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            The purpose of the resource platform is to enhance the learning capabilities of Production Engineering students at PSG Tech by providing academic, skill-building, and event resources. It aligns with the department's mission of fostering innovative and practical engineering skills and supports its vision of producing industry-ready engineers equipped with both technical knowledge and leadership capabilities.
+        </p>
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <div id="scroll-to-top" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i> <!-- Font Awesome upward arrow icon -->
+    </div>
+
+
+    <script>
+        // Show/Hide Scroll to Top button based on scroll position
+        window.onscroll = function () {
+            const button = document.getElementById('scroll-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Scroll to Top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Smooth scrolling
+            });
+        }
+    </script>
+</body>
+
+</html>
