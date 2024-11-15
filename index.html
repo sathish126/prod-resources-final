@@ -8,243 +8,194 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-      /* Scroll-to-top button styling */
-      #scroll-to-top {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          background-color: #ffffff; /* Indigo color */
-          color: rgb(0, 0, 0);
-          padding: 10px;
-          border-radius: 50%;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          display: none; /* Hidden by default */
-          cursor: pointer;
-          z-index: 1000; /* Ensures it stays above other content */
-          transition: background-color 0.3s;
-      }
+        /* Scroll-to-top button styling */
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
 
-      #scroll-to-top:hover {
-          background-color: #4338ca; /* Darker shade on hover */
-      }
-  </style>
+        #scroll-to-top:hover {
+            background-color: #4338ca;
+        }
+
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-100">
-   <!-- Header Section -->
-<header class="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 fixed w-full z-10 shadow-lg">
-  <div class="container mx-auto flex justify-between items-center">
-      <div class="flex items-center space-x-2">
-          <img src="/logo-dept.jpeg" alt="ProdEngage Logo" class="h-10 w-10 rounded-full">
-          <div class="text-white text-2xl font-bold">ProdEngage</div>
-      </div>
-      <nav class="flex space-x-6">
-          <a href="https://prodengagefinal.netlify.app/" class="text-white hover:text-gray-300 text-lg font-semibold">Home</a>
-          <div class="relative">
-              <button id="about-btn" class="text-white hover:text-gray-300 text-lg font-semibold">About</button>
-              <ul id="about-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-md hidden">
-                  <li><a href="college.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About College</a></li>
-                  <li><a href="dept.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Department</a></li>
-                  <li><a href="hod.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Word from HoD</a></li>
-                  <li><a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About this Initiative</a></li>
-              </ul>
-          </div>
-      </nav>
-  </div>
-</header>
-
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 fixed w-full z-10 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="/logo-dept.jpeg" alt="ProdEngage Logo" class="h-10 w-10 rounded-full">
+                <div class="text-white text-2xl font-bold">ProdEngage</div>
+            </div>
+            <nav class="flex space-x-6">
+                <a href="index.html" class="text-white hover:text-gray-300 text-lg font-semibold">Home</a>
+                <div class="relative">
+                    <button id="about-btn" class="text-white hover:text-gray-300 text-lg font-semibold">About</button>
+                    <ul id="about-dropdown" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-md hidden">
+                        <li><a href="college.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About College</a></li>
+                        <li><a href="dept.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Department</a></li>
+                        <li><a href="hod.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Word from HoD</a></li>
+                        <li><a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About this Initiative</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
 
     <!-- Main Content -->
     <main class="pt-24">
-
         <!-- Motivational Quote -->
         <div class="text-center text-xl font-semibold italic text-gray-700 hover:text-gray-500 transition duration-300 ease-in-out">
             "People begin to become successful the minute they decide to be." – Harvey Mackay
         </div>
 
         <!-- Main Parent Container -->
-        <div class="container mx-auto mt-10 p-6 bg-white shadow-xl rounded-lg max-w-6xl">
-            <!-- Inner Grid Layout for Download Form and Department News -->
-            <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
-                <!-- Download Resources Form -->
-                <div class="bg-gray-50 shadow-md p-8 rounded-lg">
-                    <h1 class="text-2xl font-semibold mb-6 text-center text-indigo-700">Download Resources</h1>
-                    <form class="space-y-6" id="questionPaperForm">
-                        <!-- Semester Number -->
-                        <div>
-                            <label for="sem" class="block text-lg font-semibold text-gray-700">Semester Number</label>
-                            <select id="sem" name="sem" class="block w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
-                                <option value="" selected disabled>Select Semester</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-
-                        <!-- Regulation -->
-          <div>
-            <label for="regulation" class="block text-lg font-semibold text-gray-700">Regulation</label>
-            <select id="regulation" name="regulation" class="block w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" onchange="updateSubjectCodes()">
-              <option value="" selected disabled>Select Regulation</option>
-              <option value="2023">2023</option>
-              <option value="2019">2019</option>
-            </select>
-          </div>
-
-          <!-- Subject Code -->
-          <div>
-            <label for="subject" class="block text-lg font-semibold text-gray-700">Subject Code - Course Name</label>
-            <select id="subject" name="subject" class="block w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
-              <option value="" selected disabled>Select Subject Code and Course Name</option>
-            </select>
-          </div>
-
-                        <!-- Submit Button -->
-                        <div class="flex justify-center">
-                            <button type="button" onclick="downloadQuestionPaper()" class="px-6 py-2 text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Resources</button>
-                        </div>
-                    </form>
-                  </div>
-
-               
-            </div>
-<!-- Flexbox Layout for Events and Learning Resources -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-
-  <!-- Events Resources -->
-  <div class="bg-gray-50 shadow-md p-8 rounded-lg">
-      <h2 class="text-2xl font-semibold mb-6 text-center text-indigo-700">Events Resources</h2>
-      <ul class="list-decimal ml-4 space-y-2 text-indigo-600">
-          <li><a href="https://unstop.com/" target="_blank" class="hover:underline">Unstop</a></li>
-          <li><a href="https://www.knowafest.com/explore/events" target="_blank" class="hover:underline">Knowafest</a></li>
-          <li><a href="https://internationalconferencealerts.com/" target="_blank" class="hover:underline">International Conference Alerts</a></li>
-          <li><a href="https://techfest.org/" target="_blank" class="hover:underline">TechFest IIT BOMBAY</a></li>
-          <li><a href="https://shaastra.org/" target="_blank" class="hover:underline">Shaastra IIT MADRAS</a></li>
-      </ul>
+       <!-- Transparent Form Section -->
+<div class="container mx-auto mt-10 p-6 bg-white bg-opacity-30 shadow-lg backdrop-blur-md rounded-lg max-w-6xl">
+    <h1 class="text-2xl font-semibold mb-6 text-center text-indigo-700">Download Resources</h1>
+    <form class="space-y-6" id="questionPaperForm">
+      <!-- Semester Number -->
+      <div>
+        <label for="sem" class="block text-lg font-semibold text-gray-700">Semester Number</label>
+        <select id="sem" name="sem" class="block w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 bg-opacity-75">
+          <option value="" selected disabled>Select Semester</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+  
+      <!-- Regulation -->
+      <div>
+        <label for="regulation" class="block text-lg font-semibold text-gray-700">Regulation</label>
+        <select id="regulation" name="regulation" class="block w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 bg-opacity-75" onchange="updateSubjectCodes()">
+          <option value="" selected disabled>Select Regulation</option>
+          <option value="2023">2023</option>
+          <option value="2019">2019</option>
+        </select>
+      </div>
+  
+      <!-- Subject Code -->
+      <div>
+        <label for="subject" class="block text-lg font-semibold text-gray-700">Subject Code - Course Name</label>
+        <select id="subject" name="subject" class="block w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 bg-opacity-75">
+          <option value="" selected disabled>Select Subject Code and Course Name</option>
+        </select>
+      </div>
+  
+      <!-- Submit Button -->
+      <div class="flex justify-center">
+        <button type="button" onclick="downloadQuestionPaper()" class="px-6 py-2 text-white bg-indigo-600 bg-opacity-90 rounded-md hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-300">
+          Resources
+        </button>
+      </div>
+    </form>
   </div>
 
-<!-- Add FontAwesome for icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
 
-<!-- Learning Resources -->
-<div class="bg-white shadow-lg p-10 rounded-lg max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold mb-8 text-center text-indigo-800">Learning Resources</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-            <h3 class="text-xl font-semibold text-indigo-700 mb-3 flex items-center">
-                <i class="fas fa-book-reader text-indigo-600 mr-2"></i> New Learning Resources
-            </h3>
-            <ul class="list-disc ml-6 space-y-2 text-gray-600">
-                <li><a href="https://www.indiabix.com/" target="_blank" class="text-indigo-600 hover:underline">Aptitude Preparation</a></li>
-                <li><a href="https://hbr.org/2024/01/a-simple-hack-to-help-you-communicate-more-effectively" target="_blank" class="text-indigo-600 hover:underline">Communication Skills</a></li>
-                <li><a href="https://hbr.org/2013/06/how-to-give-a-killer-presentation" target="_blank" class="text-indigo-600 hover:underline">Presentation Skills</a></li>
-                <li><a href="https://youtu.be/_WnhoIbfcoM?si=9s7LemGSPsAmWnSe" target="_blank" class="text-indigo-600 hover:underline">Academic Poster Creation Video</a></li>
-                <li><a href="https://youtu.be/lQrj_7xkeNI?si=AsqOui4xSlQ3Eeu3" target="_blank" class="text-indigo-600 hover:underline">Technical Presentation Video</a></li>
-                <li><a href="https://youtu.be/JyYb6V8mUdc?si=EMghFkgri3do-86d" target="_blank" class="text-indigo-600 hover:underline">Literature Review Video</a></li>
-                <li><a href="https://youtu.be/NM53k7x_jjk?si=8qBL0dmanzCtsFyY" target="_blank" class="text-indigo-600 hover:underline">Technical Writing Video</a></li>
-                <li><a href="https://www.linkedin.com/help/linkedin/answer/a554351" target="_blank" class="text-indigo-600 hover:underline">Create a Good LinkedIn Profile</a></li>
-            </ul>
-        </div>
-        <!-- Coding Learning Resources -->
-        <div>
-            <h3 class="text-xl font-semibold text-indigo-700 mb-3 flex items-center">
-                <i class="fas fa-code text-indigo-600 mr-2"></i> Coding Learning Resources
-            </h3>
-            <ul class="list-disc ml-6 space-y-2 text-gray-600">
-                <li><a href="https://www.geeksforgeeks.org/" target="_blank" class="text-indigo-600 hover:underline">GeeksforGeeks</a></li>
-                <li><a href="https://www.coursera.org/" target="_blank" class="text-indigo-600 hover:underline">Coursera</a></li>
-                <li><a href="https://www.udemy.com/" target="_blank" class="text-indigo-600 hover:underline">Udemy</a></li>
-                <li><a href="https://www.guvi.in/" target="_blank" class="text-indigo-600 hover:underline">GUVI</a></li>
-                <li><a href="https://www.w3schools.com/" target="_blank" class="text-indigo-600 hover:underline">W3Schools</a></li>
-            </ul>
-        </div>
-        <!-- Data Science and Machine Learning -->
-        <div>
-            <h3 class="text-xl font-semibold text-indigo-700 mb-3 flex items-center">
-                <i class="fas fa-brain text-indigo-600 mr-2"></i> Data Science and Machine Learning
-            </h3>
-            <ul class="list-disc ml-6 space-y-2 text-gray-600">
-                <li><a href="https://www.kaggle.com/" target="_blank" class="text-indigo-600 hover:underline">Kaggle</a></li>
-            </ul>
+<!-- Development Team Section -->
+<!-- Development Team Section -->
+<section class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="container mx-auto text-center">
+        <!-- Heading -->
+        <h2 class="text-3xl font-bold text-indigo-700 mb-4">Development Team</h2>
+        <p class="text-lg text-gray-600 mb-8">Meet the amazing people behind this initiative.</p>
+
+        <!-- Team List -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Team Member 1 -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-indigo-700">Sathish P</h3>
+                <p class="text-gray-600">Prod Reg 22-26</p>
+                <p class="italic text-gray-700">Developer</p>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-indigo-700">Soorya Nivash J S</h3>
+                <p class="text-gray-600">Prod Reg 22-26</p>
+                <p class="italic text-gray-700">Contributor</p>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-indigo-700">Gurpreet Paul</h3>
+                <p class="text-gray-600">Prod Reg 22-26</p>
+                <p class="italic text-gray-700">Contributor</p>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-indigo-700">Judah F</h3>
+                <p class="text-gray-600">Prod Reg 24-28</p>
+                <p class="italic text-gray-700">Contributor</p>
+            </div>
         </div>
 
-        <!-- Excel -->
-        <div>
-            <h3 class="text-xl font-semibold text-indigo-700 mb-3 flex items-center">
-                <i class="fas fa-table text-indigo-600 mr-2"></i> Excel
-            </h3>
-            <ul class="list-disc ml-6 space-y-2 text-gray-600">
-                <li><a href="https://www.excel-easy.com/" target="_blank" class="text-indigo-600 hover:underline">Excel Easy</a></li>
-                <li><a href="https://excel-practice-online.com/" target="_blank" class="text-indigo-600 hover:underline">Practice Excel</a></li>
-            </ul>
-        </div>
-
-        <!-- MATLAB -->
-        <div>
-            <h3 class="text-xl font-semibold text-indigo-700 mb-3 flex items-center">
-                <i class="fas fa-calculator text-indigo-600 mr-2"></i> MATLAB
-            </h3>
-            <ul class="list-disc ml-6 space-y-2 text-gray-600">
-                <li><a href="https://matlabacademy.mathworks.com/" target="_blank" class="text-indigo-600 hover:underline">MATLAB Academy</a></li>
-            </ul>
-        </div>
-
-        <!-- AutoCAD -->
-        <div>
-            <h3 class="text-xl font-semibold text-indigo-700 mb-3 flex items-center">
-                <i class="fas fa-drafting-compass text-indigo-600 mr-2"></i> AutoCAD
-            </h3>
-            <ul class="list-disc ml-6 space-y-2 text-gray-600">
-                <li><a href="https://youtu.be/VtLXKU1PpRU?si=swlkJQQHWScprDVX" target="_blank" class="text-indigo-600 hover:underline">AutoCAD Video Tutorial</a></li>
-            </ul>
-        </div>
-
-        <!-- Ansys -->
-        <div>
-            <h3 class="text-xl font-semibold text-indigo-700 mb-3 flex items-center">
-                <i class="fas fa-cogs text-indigo-600 mr-2"></i> Ansys
-            </h3>
-            <ul class="list-disc ml-6 space-y-2 text-gray-600">
-                <li><a href="https://www.youtube.com/@AnsysLearning/playlists" target="_blank" class="text-indigo-600 hover:underline">Ansys Learning Playlists</a></li>
-            </ul>
+        <!-- Footer Note -->
+        <div class="mt-10 text-gray-700">
+            <p class="text-lg italic">If you wish to provide sources or support, kindly DM.</p>
         </div>
     </div>
-</div>
+</section>
 
+</main>
 
-</div>
+    <!-- Scroll to Top Button -->
+    <div id="scroll-to-top" onclick="scrollToTop()" class="fixed bottom-4 right-4 bg-black text-white rounded-full p-3 shadow-lg cursor-pointer hover:bg-indigo-700 transition">
+        <i class="fas fa-chevron-up"></i>
+    </div>
 
-
-        </div>
-    </main>
-     <!-- Scroll to Top Button -->
-<div id="scroll-to-top" onclick="scrollToTop()" class="fixed bottom-4 right-4 bg-black text-white rounded-full p-3 shadow-lg cursor-pointer hover:bg-indigo-700 transition">
-  <i class="fas fa-chevron-up"></i> <!-- Font Awesome upward arrow icon -->
-</div>
-
-</body>
-  <!-- Footer Section -->
-  <footer class="bg-blue-600 p-6 mt-10 text-white">
-    <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center">
-        <div class="flex flex-col items-center lg:items-start mb-4 lg:mb-0">
-            <img src="/logo-dept.jpeg" alt="ProdEngage Logo" class="h-10 mb-2">
-            <h2 class="text-xl font-bold">ProdEngage</h2>
-            <p class="text-gray-200 text-sm">Empowering future engineers through innovative learning.</p>
-        </div>
-        <div class="flex flex-col items-center lg:items-end">
-            <p>Contact Us: 
-            </p>
+    <!-- Footer Section -->
+    <footer class="bg-blue-600 p-6 mt-10 text-white">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center">
+            <p>Contact Us</p>
             <p>Designed and Developed by Team Fixers</p>
         </div>
-    </div>
-</footer>
-</html>
+    </footer>
 
-    
-<script>
+    <script>
+        // Scroll-to-top functionality
+        window.addEventListener('scroll', function () {
+            const scrollToTopBtn = document.getElementById('scroll-to-top');
+            if (window.scrollY > 200) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Dummy function for the download button
+        function downloadQuestionPaper() {
+            alert("Download functionality will be implemented!");
+        }
+
    document.getElementById('about-btn').addEventListener('click', function() {
         const dropdown = document.getElementById('about-dropdown');
         dropdown.classList.toggle('hidden');
