@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Viewer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Main Content -->
+  <main class="p-8">
+    <!-- Course Header -->
+    <section class="mb-8">
+      <h1 class="text-3xl font-bold text-gray-800 mb-4">Advanced Data Analysis</h1>
+      <p class="text-gray-600 mb-4">
+        Master the fundamentals of data analysis using modern tools and techniques.
+      </p>
+      <div class="flex space-x-4 text-sm text-gray-500">
+        <span>12 Lessons</span>
+        <span>•</span>
+        <span>6h 30m</span>
+        <span>•</span>
+        <span>Intermediate</span>
+      </div>
+    </section>
+
+    <!-- Course Topics -->
+    <section>
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">Course Topics</h2>
+      <ul class="space-y-4">
+        <!-- Topic 1 -->
+        <li class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Introduction to Data Analysis</h3>
+          <p class="text-gray-600 mb-4">Learn the basics of data analysis and its importance in decision-making.</p>
+          <button onclick="viewTopic('introduction')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+            View Topic
+          </button>
+        </li>
+
+        <!-- Topic 2 -->
+        <li class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Statistical Analysis Methods</h3>
+          <p class="text-gray-600 mb-4">Explore statistical methods used in data analysis.</p>
+          <button onclick="viewTopic('statistics')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+            View Topic
+          </button>
+        </li>
+
+        <!-- Topic 3 -->
+        <li class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Data Visualization Workshop</h3>
+          <p class="text-gray-600 mb-4">Learn how to create impactful visualizations using modern tools.</p>
+          <button onclick="viewTopic('visualization')" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+            View Topic
+          </button>
+        </li>
+
+        <!-- Add more topics as needed -->
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function viewTopic(topic) {
+      alert(`Redirecting to the "${topic}" topic...`);
+      // Replace with actual redirection logic
+      window.location.href = `#${topic}`;
+    }
+  </script>
+</body>
+</html>

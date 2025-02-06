@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        /* Scroll-to-top button styling */
+        /* Custom styles for scroll-to-top button and background */
         #scroll-to-top {
             position: fixed;
             bottom: 20px;
@@ -39,7 +39,7 @@
 
 <body class="bg-gray-100">
     <!-- Header Section -->
-    <header class= "bg-gradient-to-r from-purple-500 to-pink-500 p-4 fixed w-full z-10 shadow-lg">
+    <header class="bg-gradient-to-r from-purple-500 to-pink-500 p-4 fixed w-full z-10 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <img src="/logo-dept.jpeg" alt="ProdEngage Logo" class="h-10 w-10 rounded-full">
@@ -60,37 +60,32 @@
     <!-- Main Content -->
     <main class="pt-24">
         <!-- Motivational Quote -->
-        <div class="mt-8 mx-auto w-11/12 md:w-9/12 lg:w-7/12 p-2 italic font-semibold  bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-lg text-center">
+        <div class="mt-8 mx-auto w-11/12 md:w-9/12 lg:w-7/12 p-2 italic font-semibold bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-lg text-center">
             "People begin to become successful the minute they decide to be." – Harvey Mackay
         </div>
 
-       
-
-        <!-- Main Parent Container -->
         <!-- Transparent Form Section -->
-        <div class="container mx-auto mt-10 p-6  bg-white shadow-lg backdrop-blur-md rounded-lg max-w-4xl">
+        <div class="container mx-auto mt-10 p-6 bg-white shadow-lg backdrop-blur-md rounded-lg max-w-4xl">
             <h1 class="text-2xl font-bold mb-6 text-center text-red-700">Download Resources</h1>
             <form class="space-y-6" id="questionPaperForm">
                 <!-- Semester Number -->
                 <div>
                     <label for="sem" class="block text-lg font-semibold italic text-gray-700">Semester Number</label>
-                    <select id="sem" name="sem"
-                        class="block w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 bg-opacity-75">
+                    <select id="sem" name="sem" class="block w-full mt-1 p-3 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 bg-opacity-75">
                         <option value="" selected disabled>Select Semester</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="6">6</option>
                     </select>
                 </div>
 
                 <!-- Regulation -->
                 <div>
                     <label for="regulation" class="block text-lg font-semibold italic text-gray-700">Regulation</label>
-                    <select id="regulation" name="regulation"
-                        class="block w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 bg-opacity-75"
-                        onchange="updateSubjectCodes()">
+                    <select id="regulation" name="regulation" class="block w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 bg-opacity-75" onchange="updateSubjectCodes()">
                         <option value="" selected disabled>Select Regulation</option>
                         <option value="2023">2023</option>
                         <option value="2019">2019</option>
@@ -100,83 +95,78 @@
                 <!-- Subject Code -->
                 <div>
                     <label for="subject" class="block text-lg font-semibold italic text-gray-700">Subject Code - Course Name</label>
-                    <select id="subject" name="subject"
-                        class="block w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 bg-opacity-75">
+                    <select id="subject" name="subject" class="block w-full mt-1 p-3 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 bg-opacity-75">
                         <option value="" selected disabled>Select Subject Code and Course Name</option>
                     </select>
                 </div>
 
                 <!-- Submit Button -->
                 <div class="flex justify-center">
-                    <button type="button" onclick="downloadQuestionPaper()"
-                        class="px-6 py-2 text-white bg-indigo-600 bg-opacity-90 rounded-md hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-300">
+                    <button type="button" onclick="downloadQuestionPaper()" class="px-6 py-2 text-white bg-indigo-600 bg-opacity-90 rounded-md hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-300">
                         Resources
                     </button>
                 </div>
             </form>
         </div>
+
+        <!-- Tamil Quote Section -->
+        <div class="mt-8 mx-auto w-11/12 md:w-9/12 lg:w-7/12 p-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-lg text-center">
+            <p class="text-2xl font-bold">கல்வியின் உயர்ந்த நோக்கம் அறிவு அல்ல செயல்.</p>
+            <p class="mt-2 text-lg italic">– Inspiration for Actions</p>
+        </div>
+        <div class="mt-2 mx-auto">
+            <p class="text-xl italic text-center">If you wish to provide source or support, kindly DM</p>
+        </div>
+
+        <!-- Team List -->
+        <h2 class="text-3xl font-bold text-indigo-700 mb-1 text-center">Development Team</h2>
+        <p class="text-lg text-gray-600 mb-3 text-center">Meet the amazing people behind this initiative.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <!-- Team Member 1 -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-indigo-700">Sathish P</h3>
+                <p class="text-gray-600">Prod Reg 22-26</p>
+                <p class="italic text-gray-700">Developer</p>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-indigo-700">Soorya Nivash J S</h3>
+                <p class="text-gray-600">Prod Reg 22-26</p>
+                <p class="italic text-gray-700">Vision Architects</p>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-indigo-700">Gurpreet Paul</h3>
+                <p class="text-gray-600">Prod Reg 22-26</p>
+                <p class="italic text-gray-700">Resource Champion</p>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="text-center">
+                <h3 class="text-xl font-semibold text-indigo-700">Judah F</h3>
+                <p class="text-gray-600">Prod Reg 24-28</p>
+                <p class="italic text-gray-700">Resource Champion</p>
+            </div>
+        </div>
     </main>
-     <!-- Tamil Quote Section -->
-     <div class="mt-8 mx-auto w-11/12 md:w-9/12 lg:w-7/12 p-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-lg text-center">
-        <p class="text-2xl font-bold">கல்வியின் உயர்ந்த நோக்கம் அறிவு அல்ல செயல்.</p>
-        <p class="mt-2 text-lg italic">– Inspiration for Actions</p>
-    </div>
-    <div class="mt-2 mx-auto ">
-        <p class="text-xl italic text-center ">If you wish to provide source or support,kindly DM</p>
-    </div>
-    <!-- Team List -->
-    <h2 class="text-3xl font-bold text-indigo-700 mb-1 text-center">Development Team</h2>
-    <p class="text-lg text-gray-600 mb-3 text-center">Meet the amazing people behind this initiative.</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <!-- Team Member 1 -->
-         
-        <div class="text-center">
-            <h3 class="text-xl font-semibold text-indigo-700">Sathish P</h3>
-            <p class="text-gray-600">Prod Reg 22-26</p>
-            <p class="italic text-gray-700">Code Maestro</p>
-        </div>
-
-        <!-- Team Member 2 -->
-        <div class="text-center">
-            <h3 class="text-xl font-semibold text-indigo-700">Soorya Nivash J S</h3>
-            <p class="text-gray-600">Prod Reg 22-26</p>
-            <p class="italic text-gray-700"> Vision Architects</p>
-        </div>
-
-        <!-- Team Member 3 -->
-        <div class="text-center">
-            <h3 class="text-xl font-semibold text-indigo-700">Gurpreet Paul</h3>
-            <p class="text-gray-600">Prod Reg 22-26</p>
-            <p class="italic text-gray-700">Resource Champion</p>
-        </div>
-
-        <!-- Team Member 4 -->
-        <div class="text-center">
-            <h3 class="text-xl font-semibold text-indigo-700">Judah F</h3>
-            <p class="text-gray-600">Prod Reg 24-28</p>
-            <p class="italic text-gray-700">Resource Champion</p>
-        </div>
-    </div>  
-    
 
     <!-- Scroll to Top Button -->
-    <div id="scroll-to-top" onclick="scrollToTop()"
-        class="fixed bottom-4 right-4 bg-black text-white rounded-full p-3 shadow-lg cursor-pointer hover:bg-indigo-700 transition">
+    <div id="scroll-to-top" onclick="scrollToTop()" class="fixed bottom-4 right-4 bg-black text-white rounded-full p-3 shadow-lg cursor-pointer hover:bg-indigo-700 transition">
         <i class="fas fa-chevron-up"></i>
     </div>
 
     <!-- Footer Section -->
-    <footer class=" p-6 mt-10 text-white bg-gradient-to-r from-purple-500 to-pink-500">
+    <footer class="p-6 mt-10 text-white bg-gradient-to-r from-purple-500 to-pink-500">
         <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center">
             <p>Contact Us</p>
-            <p>Sponsored by Team Fixers</p>
+            <p>Sponsored by TheFixers</p>
         </div>
     </footer>
-</body>
-
 
     <script>
-        // Scroll-to-top functionality
+        // JavaScript for interactive functionalities
         window.addEventListener('scroll', function () {
             const scrollToTopBtn = document.getElementById('scroll-to-top');
             if (window.scrollY > 200) {
@@ -190,155 +180,135 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Dummy function for the download button
-        function downloadQuestionPaper() {
-            alert("Download functionality will be implemented!");
-        }
+        document.getElementById('about-btn').addEventListener('click', function() {
+            const dropdown = document.getElementById('about-dropdown');
+            dropdown.classList.toggle('hidden');
+        });
 
-   document.getElementById('about-btn').addEventListener('click', function() {
-        const dropdown = document.getElementById('about-dropdown');
-        dropdown.classList.toggle('hidden');
-    });
-
-    // Optional: Close the dropdown if clicked outside
-    window.addEventListener('click', function(event) {
-        const dropdown = document.getElementById('about-dropdown');
-        const button = document.getElementById('about-btn');
-        if (!button.contains(event.target) && !dropdown.contains(event.target)) {
-            dropdown.classList.add('hidden');
-        }
-    });
-    // Show/Hide Scroll to Top button based on scroll position
-    window.onscroll = function() {
-            const button = document.getElementById('scroll-to-top');
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                button.style.display = "block";
-            } else {
-                button.style.display = "none";
+        window.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('about-dropdown');
+            const button = document.getElementById('about-btn');
+            if (!button.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.classList.add('hidden');
             }
-        };
+        });
 
-        // Scroll to Top function
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // Smooth scrolling
+        function updateSubjectCodes() {
+            const sem = document.getElementById('sem').value;
+            const regulation = document.getElementById('regulation').value;
+            const subjectSelect = document.getElementById('subject');
+            subjectSelect.innerHTML = '<option value="" selected disabled>Select Subject Code and Course Name</option>';
+
+            const subjectCodes = getSubjectCodes(regulation, sem);
+            subjectCodes.forEach(subject => {
+                const option = document.createElement('option');
+                option.value = subject.code;
+                option.textContent = `${subject.code} - ${subject.name}`;
+                subjectSelect.appendChild(option);
             });
         }
 
-function updateRegulationCodes() {
-    const sem = document.getElementById('sem').value;
-    const regulationSelect = document.getElementById('regulation');
-    regulationSelect.disabled = !sem; // Enable or disable regulation dropdown based on semester selection
-}
-
-function updateSubjectCodes() {
-    const sem = document.getElementById('sem').value;
-    const regulation = document.getElementById('regulation').value;
-    const subjectSelect = document.getElementById('subject');
-    subjectSelect.innerHTML = ''; // Clear existing options
-
-    const subjectCodes = getSubjectCodes(regulation, sem);
-    
-    // Populate the subject dropdown
-    subjectCodes.forEach(subject => {
-        const option = document.createElement('option');
-        option.value = subject.code;
-        option.textContent = `${subject.code} - ${subject.name}`;
-        subjectSelect.appendChild(option);
-    });
-}
-
-function getSubjectCodes(regulation, sem) {
-    const subjects = {
-        '2023': {
-            '1': [
-                { code: '23P101', name: 'Calculus and its Applications' },
-                { code: '23P102', name: 'Physics' },
-                { code: '23P103', name: 'Chemistry of Engineering Materials' },
-                { code: '23P104', name: 'Engineering Materials and Metallurgy' },
-                { code: '23G105', name: 'English Language Proficiency' },
-                { code: '23P110', name: 'Basic Sciences Laboratory' },
-                { code: '23P111', name: 'Engineering Practices Laboratory' }
-            ],
-            '2': [
-                { code: '23P201', name: 'Complex Variables and Transforms' },
-                { code: '23P202', name: 'Casting Technology' },
-                { code: '23P203', name: 'Engineering Mechanics' },
-                { code: '23P204', name: 'Basics of Electrical and Electronics Engineering' },
-                { code: '23P210', name: 'Engineering Graphics' },
-                { code: '23P211', name: 'Electrical and Electronics Engineering Laboratory' }
-            ]
-        },
-        '2019': {
-            '1': [
-                { code: '19P101', name: 'Calculus and its Applications' },
-                { code: '19P102', name: 'Physics' },
-                { code: '19P103', name: 'Chemistry' },
-                { code: '19P104', name: 'Professional Ethics' },
-                { code: '19G105', name: 'English Language Proficiency' },
-                { code: '19P110', name: 'Engineering Graphics' },
-                { code: '19P111', name: 'Basic Sciences Laboratory' },
-                { code: '19P112', name: 'Engineering Practices' }
-            ],
-            '2': [
-                { code: '19P201', name: 'Complex Variables and Transforms' },
-                { code: '19P202', name: 'Materials Science' },
-                { code: '19P203', name: 'Chemistry of Engineering Materials' },
-                { code: '19P204', name: 'Engineering Mechanics' },
-                { code: '19P205', name: 'Basics of Electrical and Electronics Engineering' },
-                { code: '19P210', name: 'Electrical and Electronics Engineering Laboratory' }
-            ],
-            '3': [
-                { code: '19P301', name: 'Numerical Methods' },
-                { code: '19P302', name: 'Engineering Metallurgy' },
-                { code: '19P303', name: 'Strength of Materials' },
-                { code: '19P304', name: 'Fluid Mechanics and Machinery' },
-                { code: '19P305', name: 'Welding Technology' },
-                { code: '19O306', name: 'Engineering Economics' },
-                { code: '19P310', name: 'Machine Drawing' },
-                { code: '19P311', name: 'Metallurgy and Strength of Materials Laboratory' }
-            ],
-            '4': [
-                { code: '19P401', name: 'Probability and Statistics' },
-                { code: '19P402', name: 'Thermal Systems and Heat Transfer' },
-                { code: '19P403', name: 'Metal Forming Process' },
-                { code: '19P404', name: 'Foundry Technology' },
-                { code: '19P405', name: 'Mechanics of Machines' },
-                { code: '19P406', name: 'Machining Technology' },
-                { code: '19P410', name: 'Thermal Engineering and Fluid Machinery Laboratory' },
-                { code: '19P411', name: 'Machining Technology Laboratory' },
-                { code: '19Q413', name: 'Soft Skills Development' },
-                { code: '19O412', name: 'Indian Constitution' },
-                { code: '19TC02', name: 'Tamils and Technology' }
-            ],
-            '5': [
-                { code: '19P023', name: 'Statistical Quality Control' },
-                { code: '19P501', name: 'Computer Numerical Control Machines' },
-                { code: '19P502', name: 'Process Planning and Cost Estimation' },
-                { code: '19P503', name: 'Manufacturing Metrology' },
-                { code: '19P504', name: 'Design of Machine Elements' },
-                { code: '19P505', name: 'Applied Hydraulics and Pneumatics' },
-                { code: '19P510', name: 'Manufacturing Technology Laboratory' },
-                { code: '19P511', name: 'Metrology and Computer Aided Inspection Laboratory' },
-                { code: '19P555', name: 'Business and Marginal Communication' }
-            ]
+        function getSubjectCodes(regulation, sem) {
+            const subjects = {
+                '2023': {
+                    '1': [
+                        { code: '23P101', name: 'Calculus and its Applications' },
+                        { code: '23P102', name: 'Physics' },
+                        { code: '23P103', name: 'Chemistry of Engineering Materials' },
+                        { code: '23P104', name: 'Engineering Materials and Metallurgy' },
+                        { code: '23G105', name: 'English Language Proficiency' },
+                        { code: '23P110', name: 'Basic Sciences Laboratory' },
+                        { code: '23P111', name: 'Engineering Practices Laboratory' }
+                    ],
+                    '2': [
+                        { code: '23P201', name: 'Complex Variables and Transforms' },
+                        { code: '23P202', name: 'Casting Technology' },
+                        { code: '23P203', name: 'Engineering Mechanics' },
+                        { code: '23P204', name: 'Basics of Electrical and Electronics Engineering' },
+                        { code: '23P210', name: 'Engineering Graphics' },
+                        { code: '23P211', name: 'Electrical and Electronics Engineering Laboratory' }
+                    ]
+                },
+                '2019': {
+                    '1': [
+                        { code: '19P101', name: 'Calculus and its Applications' },
+                        { code: '19P102', name: 'Physics' },
+                        { code: '19P103', name: 'Chemistry' },
+                        { code: '19P104', name: 'Professional Ethics' },
+                        { code: '19G105', name: 'English Language Proficiency' },
+                        { code: '19P110', name: 'Engineering Graphics' },
+                        { code: '19P111', name: 'Basic Sciences Laboratory' },
+                        { code: '19P112', name: 'Engineering Practices' }
+                    ],
+                    '2': [
+                        { code: '19P201', name: 'Complex Variables and Transforms' },
+                        { code: '19P202', name: 'Materials Science' },
+                        { code: '19P203', name: 'Chemistry of Engineering Materials' },
+                        { code: '19P204', name: 'Engineering Mechanics' },
+                        { code: '19P205', name: 'Basics of Electrical and Electronics Engineering' },
+                        { code: '19P210', name: 'Electrical and Electronics Engineering Laboratory' }
+                    ],
+                    '3': [
+                        { code: '19P301', name: 'Numerical Methods' },
+                        { code: '19P302', name: 'Engineering Metallurgy' },
+                        { code: '19P303', name: 'Strength of Materials' },
+                        { code: '19P304', name: 'Fluid Mechanics and Machinery' },
+                        { code: '19P305', name: 'Welding Technology' },
+                        { code: '19O306', name: 'Engineering Economics' },
+                        { code: '19P310', name: 'Machine Drawing' },
+                        { code: '19P311', name: 'Metallurgy and Strength of Materials Laboratory' }
+                    ],
+                    '4': [
+                        { code: '19P401', name: 'Probability and Statistics' },
+                        { code: '19P402', name: 'Thermal Systems and Heat Transfer' },
+                        { code: '19P403', name: 'Metal Forming Process' },
+                        { code: '19P404', name: 'Foundry Technology' },
+                        { code: '19P405', name: 'Mechanics of Machines' },
+                        { code: '19P406', name: 'Machining Technology' },
+                        { code: '19P410', name: 'Thermal Engineering and Fluid Machinery Laboratory' },
+                        { code: '19P411', name: 'Machining Technology Laboratory' },
+                        { code: '19Q413', name: 'Soft Skills Development' },
+                        { code: '19O412', name: 'Indian Constitution' },
+                        { code: '19TC02', name: 'Tamils and Technology' }
+                    ],
+                    '5': [
+                        { code: '19P023', name: 'Statistical Quality Control' },
+                        { code: '19P501', name: 'Computer Numerical Control Machines' },
+                        { code: '19P502', name: 'Process Planning and Cost Estimation' },
+                        { code: '19P503', name: 'Manufacturing Metrology' },
+                        { code: '19P504', name: 'Design of Machine Elements' },
+                        { code: '19P505', name: 'Applied Hydraulics and Pneumatics' },
+                        { code: '19P510', name: 'Manufacturing Technology Laboratory' },
+                        { code: '19P511', name: 'Metrology and Computer Aided Inspection Laboratory' },
+                        { code: '19P555', name: 'Business and Marginal Communication' }
+                    ],
+                    '6': [
+                        { code: '19P009', name: 'LEAN MANUFACTURING' },
+                        { code: '19P012', name: 'SUPPLY CHAIN MANAGEMENT' },
+                        { code: '19P601', name: 'QUANTITATIVE METHODS IN MANAGEMENT' },
+                        { code: '19P602', name: 'JIGS, FIXTURES AND DIE DESIGN' },
+                        { code: '19P603', name: 'DESIGN FOR MANUFACTURE AND ASSEMBLY' },
+                        { code: '19P604', name: 'AUTOMATION AND ROBOTICS' },
+                        { code: '19P610', name: 'FLUID POWER LABORATORY' },
+                        { code: '19P611', name: 'CAD, CAM AND CAE LABORATORY' },
+                        { code: '19Q613', name: 'QUANTITATIVE AND REASONING SKILLS' },
+                        { code: '19P666', name: 'Previous year all CA qn Paper' },
+                        { code: '19O04', name: 'SDG' }
+                    ]
+                }
+            };
+            return subjects[regulation]?.[sem] || [];
         }
-    };
 
-    return subjects[regulation]?.[sem] || [];
-}
+        function downloadQuestionPaper() {
+            const sem = document.getElementById('sem').value;
+            const regulation = document.getElementById('regulation').value;
+            const subject = document.getElementById('subject').value;
 
-function downloadQuestionPaper() {
-    const sem = document.getElementById('sem').value;
-    const regulation = document.getElementById('regulation').value;
-    const subject = document.getElementById('subject').value;
-
-    if (!sem || !regulation || !subject) {
-        alert('Please select all the fields.');
-        return;
-    }
-
+            if (!sem || !regulation || !subject) {
+                alert('Please select all the fields.');
+                return;
+            }
    // Individual drive link generation based on subject codes
 const driveLinks = {
     // 2023 Regulation Semester 1
@@ -363,7 +333,6 @@ const driveLinks = {
     '19P103': 'https://drive.google.com/drive/folders/1sjXZtbkmEt3O4d3XBn1kpZQmh4SG7hiP?usp=drive_link',
     '19P104': 'https://drive.google.com/drive/folders/14F_jv200BcSo5vDHs6v88edfzr_7Gzzh?usp=drive_link',
     '19G105': 'https://drive.google.com/drive/folders/16jotibxGfhQtfcwEwUqAiWqADKfk6oMZ?usp=drive_link',
-    '19P110': 'https://drive.google.com/drive/folders/19P110',  
     '19P111': 'https://drive.google.com/drive/folders/1AS1pkOyTd9MwI-3AX-iRlIpOLc4LBw70?usp=drive_link',
     '19P112': 'https://drive.google.com/drive/folders/1xrrYtOL0fabxeQ91tk4fMXGO1aBWDUPj?usp=drive_link',    
     // 2019 Regulation - Semester 2
@@ -407,6 +376,17 @@ const driveLinks = {
     '19P510': 'https://drive.google.com/drive/folders/1BnfsGDcEKs2EZuFX5z3d5D_0eKgvotAH?usp=drive_link',
     '19P511': 'https://drive.google.com/drive/folders/1BrVr1TAxh0dszfWbJ2sINsBm_xwMToAz?usp=drive_link',
     '19P555': 'https://drive.google.com/drive/folders/1JKs03XbLxj9Cjsimc43I5TM6PjFc75jf?usp=drive_link',
+    // 2019 Regulation - Semester 6
+    '19P009': 'https://drive.google.com/drive/folders/1906ov5et9cz_qb8OQmOqtcOW1Qd_dcUU?usp=drive_link', 
+    '19P012': 'https://drive.google.com/drive/folders/19gEC8e2lfN3rdm1TDp85fPM6hloYjbn1?usp=drive_link', 
+    '19P601': 'https://drive.google.com/drive/folders/19P16WKSS0bwNC1CNFXBeNLyjx1imdUy0?usp=drive_link',
+    '19P602': 'https://drive.google.com/drive/folders/19P60xkM4e32ncncAk0Jlbplxy9M7X7jg?usp=drive_link', 
+    '19P603': 'https://drive.google.com/drive/folders/19Q9cTAvdvY1fTEXQDQLM3Q6IFwqkvVhh?usp=drive_link', 
+    '19P604': 'https://drive.google.com/drive/folders/19XBTddsc8GpU-4P4qssDLymtb1AkmG9L?usp=drive_link',
+    '19P666': 'https://drive.google.com/file/d/1TdCVZVVBMVhhVWVYonD6ZDzWs6JZBSBA/view?usp=drive_link' ,
+    '19O04': 'https://drive.google.com/drive/folders/19cjvtWNsmDX44Bo4Gpd7S3iMtd7Ibw8g?usp=drive_link' 
+
+
     
 
 };
